@@ -5,6 +5,7 @@ import com.github.bhlangonijr.chesslib.Square;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * The type Bitboard test.
@@ -54,6 +55,14 @@ public class BitboardTest {
                         "00010000\n" +
                         "00010000\n");
 
+    }
+
+    @Test
+    public void testHasOnlyOneBit() {
+
+        for (int i = 0; i < Square.values().length - 1; i++) {
+            assertTrue(Bitboard.hasOnly1Bit(Square.squareAt(i).getBitboard()));
+        }
     }
 
 }
