@@ -55,7 +55,7 @@ Chesslib dependency can be added via the jitpack repository.
 <dependency>
   <groupId>com.github.bhlangonijr</groupId>
   <artifactId>chesslib</artifactId>
-  <version>1.3.3</version>
+  <version>1.3.4</version>
 </dependency>
 ```
 
@@ -71,7 +71,7 @@ repositories {
 ```groovy
 dependencies {
     ...
-    compile 'com.github.bhlangonijr:chesslib:1.3.3'
+    compile 'com.github.bhlangonijr:chesslib:1.3.4'
     ...
 }
 ```
