@@ -1204,7 +1204,7 @@ public class Board implements Cloneable, BoardEvent {
 
         if (fullValidation) {
             if (Piece.NONE.equals(fromPiece)) {
-                throw new RuntimeException("From piece cannot be null");
+                return false;
             }
 
             if (fromPiece.getPieceSide().equals(capturedPiece.getPieceSide())) {

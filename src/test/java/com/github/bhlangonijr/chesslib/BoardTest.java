@@ -829,5 +829,14 @@ public class BoardTest {
         assertEquals("rnbqkbnr/pppppppp/8/8/4P3/8/PPPP1PPP/RNBQKBNR b KQkq e3 0 1", board.getFen());
     }
 
+    @Test
+    public void testIsMoveLegalWithFullValidationFailureCase() {
+        Board board = new Board();
+        board.doMove(new Move(Square.E2, Square.E4));
+        board.doMove(new Move(Square.E7, Square.E5));
+
+        //* now there is no piece on E2 square
+        assertFalse(board.isMoveLegal(new Move(Square.E2, Square.E3), true));
+    }
 
 }
